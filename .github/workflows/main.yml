@@ -34,7 +34,7 @@ jobs:
       - name: Migrate Database
         run: npx prisma migrate deploy
         env:
-          DATABASE_URL: ${{ screts.DATABASE_URL }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: Deploy
         run: railway up
